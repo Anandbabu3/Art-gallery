@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Art Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #ff4500, #ffde00);
+            animation: fadeIn 1s ease-in;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            font-size: 24px;
+            font-family: 'Georgia', serif;
+            color: #111;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffde00;
+        }
+
+        p {
+            max-width: 800px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        p:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            max-width: 1200px;
+        }
+
+        .team-member {
+            text-align: center;
+            width: 200px;
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+
+        .team-member img {
+            width: 150px; /* Set a fixed width */
+            height: 150px; /* Set a fixed height to maintain circular shape */
+            border-radius: 50%;
+            border: 5px solid #ffde00;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+
+        .team-member h3 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #ffde00;
+        }
+
+        .team-member p {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .contact {
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #ffde00;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">ART GALLERY</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="paintings.html">Paintings</a></li>
+                <li><a href="sculptures.html">Sculptures</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <h1>About Us</h1>
+        <p>Welcome to our Art Gallery! We are dedicated to showcasing the finest artworks from talented artists around the world. Our gallery provides a platform for both emerging and established artists to display their creations and share their unique visions.</p>
+        <p>At our gallery, we believe in the power of art to inspire, challenge, and connect people. We curate diverse exhibitions that engage with various themes and mediums, ensuring there’s something for everyone to enjoy.</p>
+    </section>
+
+    <section class="team">
+        <div class="team-member">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\WhatsApp Image 2024-07-18 at 18.17.57_6831a18f.jpg" alt="John Doe">
+            <h3>Anand</h3>
+            <p>Gallery Director</p>
+        </div>
+        <div class="team-member">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\WhatsApp Image 2024-10-03 at 12.01.19_77b9bbb8.jpg" alt="Jane Smith">
+            <h3>Ananth</h3>
+            <p>Curator</p>
+        </div>
+        <div class="team-member">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\WhatsApp Image 2024-10-03 at 11.59.11_0ef116bd.jpg" alt="Emily Johnson">
+            <h3>Ruthvik</h3>
+            <p>Marketing Specialist</p>
+        </div>
+    </section>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/art-gallery-expo-background_52683-68244.jpg?size=626&ext=jpg&ga=GA1.1.1134810147.1715410325&semt=ais_hybrid');
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #ff4500, #ffde00);
+            animation: fadeIn 1s ease-in;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            font-size: 24px;
+            font-family: 'Georgia', serif;
+            color: #111;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            padding: 100px 40px 40px;
+            background-color: #000;
+        }
+
+        .art-item {
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s;
+        }
+
+        .art-item:hover {
+            transform: scale(1.05);
+        }
+
+        .art-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        .art-item p {
+            margin-top: 10px;
+        }
+
+        .price {
+            float: right;
+        }
+
+        .add-to-cart {
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ffde00;
+        }
+
+        .cart {
+            position: fixed;
+            right: 20px;
+            top: 80px;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+        }
+
+        .cart h2 {
+            margin-bottom: 10px;
+        }
+
+        .cart-item {
+            margin-bottom: 10px;
+        }
+
+        .sale-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #000;
+            font-weight: bold;
+        }
+
+        .sale-banner h1 {
+            font-size: 72px;
+            color: #ffde00;
+            text-align: right;
+            animation: bounce 2s infinite;
+            width: 45%;
+        }
+
+        @keyframes bounce {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .more-art-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 40px;
+            background-color: #000;
+        }
+
+        .more-art-items .art-item {
+            margin-bottom: 30px;
+            width: 28%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">ART GALLERY</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="paintings.html">Paintings</a></li>
+                <li><a href="sculptures.html">Sculptures</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\p1.jpeg">
+            <p><strong>Nandi Bull</strong> <span class="price">RS:40000/-</span></p>
+            <p>By Vinay<br>ACRYLIC ON CANVAS</p>
+        </div>
+
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\p5.jpeg" alt="Radha Krishna">
+            <p><strong>KRISHNA</strong> <span class="price">RS:2000/-</span></p>
+            <p>BY PRAVIN<br>ACRYLIC ON CANVAS</p>
+        </div>
+
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\p3.jpeg" alt="Ganesha">
+            <p><strong>Rajasthani</strong> <span class="price">RS:3000/-</span></p>
+            <p>By Pras<br>ACRYLIC ON CANVAS</p>
+        </div>
+    </section>
+
+    <section class="more-art-items">
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\p4.jpeg" alt="Buddha">
+            <p><strong>Banaras</strong> <span class="price">RS:1000/-</span></p>
+            <p>By Shashank<br>ACRYLIC ON CANVAS</p>
+        </div>
+
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\a4.jpg">
+            <p><strong>KRISHNA</strong> <span class="price">RS:2000/-</span></p>
+            <p>BY PRAVIN<br>ACRYLIC ON CANVAS</p>
+        </div>
+
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\Ramesh-Gorjala-20-x-24-inches-Acrylic-on-canvas-Ganesha-300x363.jpeg" alt="Ganesha">
+            <p><strong>GANESHA</strong> <span class="price">RS:3000/-</span></p>
+            <p>BY RAMESH<br>ACRYLIC ON CANVAS</p>
+        </div>
+    </section>
+</body>
+
+</html>

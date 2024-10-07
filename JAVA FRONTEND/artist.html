@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/art-gallery-expo-background_52683-68244.jpg?size=626&ext=jpg&ga=GA1.1.1134810147.1715410325&semt=ais_hybrid');
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #ff4500, #ffde00);
+            animation: fadeIn 1s ease-in;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            font-size: 24px;
+            font-family: 'Georgia', serif;
+            color: #111;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 120px 40px 40px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .art-item {
+            text-align: center;
+            width: 30%;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .art-item:hover {
+            transform: scale(1.05);
+        }
+
+        .art-item img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .art-item p {
+            margin-top: 10px;
+            background-color: white;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .price {
+            float: right;
+        }
+
+        .add-to-cart {
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ffde00;
+        }
+
+        .more-art-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .more-art-items .art-item {
+            width: 28%;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .art-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .art-item {
+                width: 90%;
+            }
+
+            header {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">ART GALLERY</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="paintings.html">Paintings</a></li>
+                <li><a href="sculptures.html">Sculptures</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\a1.jpg">
+            <!-- <p><strong>Ponder</strong> <span class="price">RS: 40,000</span></p> -->
+            <p>Mojan</p>
+        </div>
+
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\a2.jpeg">
+            <!-- <p><strong>Ganesha</strong> <span class="price">RS: 2,000</span></p> -->
+            <p>Amit</p>
+        </div>
+
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\a3.jpg" alt="Shelf Sculptures">
+            <!-- <p><strong>Shelf Sculptures</strong> <span class="price">RS: 3,000</span></p> -->
+            <p>Anand Pras</p>
+        </div>
+    </section>
+
+    <section class="more-art-items">
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\a4.jpg" alt="Couples">
+            <!-- <p><strong>Couples</strong> <span class="price">RS: 1,000</span></p> -->
+            <p>Shashank</p>
+        </div>
+
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\a5.jpg" alt="Simple">
+            <!-- <p><strong>Simple</strong> <span class="price">RS: 2,000</span></p> -->
+            <p>CityScape</p>
+        </div>
+
+        <div class="art-item">
+            <img src="C:\Users\gella\OneDrive\Desktop\JAVA FRONTEND (2)\JAVA FRONTEND\Images\a6.jpg" alt="Family Bond">
+            <!-- <p><strong>Family Bond</strong> <span class="price">RS: 3,000</span></p> -->
+            <p>Dipti Kumar</p>
+        </div>
+    </section>
+</body>
+
+</html>
